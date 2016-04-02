@@ -12059,11 +12059,11 @@ SOurce: www.abracon.com</description>
 <part name="L1" library="rcl" deviceset="L-EU" device="L2012C"/>
 <part name="P+4" library="supply1" deviceset="VCC" device=""/>
 <part name="GND2" library="supply1" deviceset="GND" device=""/>
-<part name="PAD1" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254"/>
-<part name="PAD2" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254"/>
-<part name="PAD3" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254"/>
-<part name="PAD4" library="wirepad" deviceset="WIREPAD" device="SMD2,54-5,08"/>
-<part name="PAD5" library="wirepad" deviceset="WIREPAD" device="SMD2,54-5,08"/>
+<part name="VIN" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254"/>
+<part name="VGND" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254"/>
+<part name="PWM" library="wirepad" deviceset="WIREPAD" device="SMD1,27-254"/>
+<part name="M_VIN" library="wirepad" deviceset="WIREPAD" device="SMD2,54-5,08"/>
+<part name="M_GND" library="wirepad" deviceset="WIREPAD" device="SMD2,54-5,08"/>
 <part name="P+5" library="supply1" deviceset="VCC" device=""/>
 <part name="GND3" library="supply1" deviceset="GND" device=""/>
 <part name="R5" library="rcl" deviceset="R-EU_" device="R0603"/>
@@ -12158,11 +12158,11 @@ SOurce: www.abracon.com</description>
 <instance part="L1" gate="G$1" x="-2.54" y="91.44" rot="R90"/>
 <instance part="P+4" gate="VCC" x="7.62" y="96.52"/>
 <instance part="GND2" gate="1" x="7.62" y="73.66"/>
-<instance part="PAD1" gate="G$1" x="-30.48" y="91.44"/>
-<instance part="PAD2" gate="G$1" x="-30.48" y="78.74"/>
-<instance part="PAD3" gate="G$1" x="-30.48" y="66.04"/>
-<instance part="PAD4" gate="G$1" x="-30.48" y="48.26"/>
-<instance part="PAD5" gate="G$1" x="-30.48" y="40.64"/>
+<instance part="VIN" gate="G$1" x="-30.48" y="91.44"/>
+<instance part="VGND" gate="G$1" x="-30.48" y="78.74"/>
+<instance part="PWM" gate="G$1" x="-30.48" y="66.04"/>
+<instance part="M_VIN" gate="G$1" x="-30.48" y="48.26"/>
+<instance part="M_GND" gate="G$1" x="-30.48" y="40.64"/>
 <instance part="P+5" gate="VCC" x="15.24" y="15.24"/>
 <instance part="GND3" gate="1" x="15.24" y="-15.24"/>
 <instance part="R5" gate="G$1" x="-20.32" y="66.04" rot="R180"/>
@@ -12333,7 +12333,7 @@ SOurce: www.abracon.com</description>
 <pinref part="R1" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="PAD5" gate="G$1" pin="P"/>
+<pinref part="M_GND" gate="G$1" pin="P"/>
 <pinref part="SUPPLY2" gate="G$1" pin="AGND"/>
 <wire x1="-27.94" y1="40.64" x2="-22.86" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="40.64" x2="-22.86" y2="38.1" width="0.1524" layer="91"/>
@@ -12372,7 +12372,7 @@ SOurce: www.abracon.com</description>
 <pinref part="PAD9" gate="G$1" pin="P"/>
 </segment>
 <segment>
-<pinref part="PAD4" gate="G$1" pin="P"/>
+<pinref part="M_VIN" gate="G$1" pin="P"/>
 <pinref part="MOTOR_PWR1" gate="+12V" pin="+12V"/>
 <wire x1="-27.94" y1="48.26" x2="-22.86" y2="48.26" width="0.1524" layer="91"/>
 <wire x1="-22.86" y1="48.26" x2="-22.86" y2="50.8" width="0.1524" layer="91"/>
@@ -12386,7 +12386,7 @@ SOurce: www.abracon.com</description>
 <wire x1="-20.32" y1="91.44" x2="-27.94" y2="91.44" width="0.1524" layer="91"/>
 <wire x1="-20.32" y1="88.9" x2="-20.32" y2="91.44" width="0.1524" layer="91"/>
 <junction x="-20.32" y="91.44"/>
-<pinref part="PAD1" gate="G$1" pin="P"/>
+<pinref part="VIN" gate="G$1" pin="P"/>
 </segment>
 </net>
 <net name="N$5" class="0">
@@ -12413,7 +12413,7 @@ SOurce: www.abracon.com</description>
 <junction x="-10.16" y="78.74"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="7.62" y1="78.74" x2="7.62" y2="76.2" width="0.1524" layer="91"/>
-<pinref part="PAD2" gate="G$1" pin="P"/>
+<pinref part="VGND" gate="G$1" pin="P"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -12469,7 +12469,7 @@ SOurce: www.abracon.com</description>
 <net name="N$13" class="0">
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
-<pinref part="PAD3" gate="G$1" pin="P"/>
+<pinref part="PWM" gate="G$1" pin="P"/>
 <wire x1="-25.4" y1="66.04" x2="-27.94" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
