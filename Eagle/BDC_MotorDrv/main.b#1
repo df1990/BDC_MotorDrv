@@ -1396,13 +1396,6 @@ Source: http://www.vishay.com/docs/83673/sfh618.pdf</description>
 <rectangle x1="0.889" y1="3.2" x2="1.651" y2="3.925" layer="51" rot="R180"/>
 <rectangle x1="-1.651" y1="3.2" x2="-0.889" y2="3.925" layer="51" rot="R180"/>
 </package>
-<package name="REFLECTIVE_SENSOR">
-<description>Generic package for reflective optical sensor, mounted at edge of board</description>
-<smd name="1" x="0" y="1.27" dx="2.1844" dy="1.0668" layer="1"/>
-<smd name="2" x="0" y="-1.27" dx="2.1844" dy="1.0668" layer="1"/>
-<smd name="3" x="0" y="-1.27" dx="2.1844" dy="1.0668" layer="16" rot="R180"/>
-<smd name="4" x="0" y="1.27" dx="2.1844" dy="1.0668" layer="16" rot="R180"/>
-</package>
 </packages>
 </library>
 </libraries>
@@ -1627,9 +1620,6 @@ design rules under a new name.</description>
 <attribute name="MF" value="" x="34.925" y="13.335" size="1.778" layer="28" rot="MR0" display="off"/>
 <attribute name="OC_FARNELL" value="unknown" x="34.925" y="13.335" size="1.778" layer="28" rot="MR0" display="off"/>
 </element>
-<element name="OK1" library="optocoupler" package="REFLECTIVE_SENSOR" value="LTV816GEN" x="7.62" y="67.31" rot="R270"/>
-<element name="R6" library="rcl" package="R0603" value="" x="-39.37" y="35.56"/>
-<element name="R7" library="rcl" package="R0603" value="" x="-43.18" y="35.56"/>
 <element name="PAD6" library="wirepad" package="SMD1,27-2,54" value="WIREPADSMD1,27-254" x="-31.75" y="25.4"/>
 <element name="PAD7" library="wirepad" package="SMD1,27-2,54" value="WIREPADSMD1,27-254" x="-35.56" y="25.4"/>
 <element name="PAD8" library="wirepad" package="SMD1,27-2,54" value="WIREPADSMD1,27-254" x="-39.37" y="25.4"/>
@@ -1646,8 +1636,6 @@ design rules under a new name.</description>
 <contactref element="C3" pad="1"/>
 <contactref element="C5" pad="1"/>
 <contactref element="U$2" pad="4"/>
-<contactref element="R6" pad="2"/>
-<contactref element="R7" pad="2"/>
 <contactref element="VIN" pad="1"/>
 <wire x1="24.35" y1="11.62" x2="52.49" y2="24.13" width="0" layer="19" extent="1-16"/>
 <wire x1="25.16" y1="6.35" x2="24.35" y2="11.62" width="0" layer="19" extent="1-1"/>
@@ -1656,9 +1644,7 @@ design rules under a new name.</description>
 <wire x1="5.31" y1="53.975" x2="5.1054" y2="51.435" width="0" layer="19" extent="1-1"/>
 <wire x1="6.985" y1="54.19" x2="5.31" y2="53.975" width="0" layer="19" extent="1-1"/>
 <wire x1="2.54" y1="64.135" x2="5.31" y2="53.975" width="0" layer="19" extent="1-1"/>
-<wire x1="-38.52" y1="35.56" x2="4.685" y2="48.895" width="0" layer="19" extent="1-1"/>
-<wire x1="-42.33" y1="35.56" x2="-38.52" y2="35.56" width="0" layer="19" extent="1-1"/>
-<wire x1="-39.89" y1="29.21" x2="-38.52" y2="35.56" width="0" layer="19" extent="1-1"/>
+<wire x1="-39.89" y1="29.21" x2="4.685" y2="48.895" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="R3" pad="1"/>
@@ -1728,10 +1714,6 @@ design rules under a new name.</description>
 <contactref element="C2" pad="2"/>
 <contactref element="U$2" pad="2"/>
 <contactref element="C5" pad="2"/>
-<contactref element="OK1" pad="4"/>
-<contactref element="OK1" pad="2"/>
-<wire x1="6.35" y1="67.31" x2="8.89" y2="67.31" width="0" layer="19" extent="1-16"/>
-<wire x1="2.54" y1="62.23" x2="6.35" y2="67.31" width="0" layer="19" extent="1-1"/>
 <wire x1="2.31" y1="53.975" x2="2.54" y2="62.23" width="0" layer="19" extent="1-1"/>
 <wire x1="2.5146" y1="51.435" x2="2.31" y2="53.975" width="0" layer="19" extent="1-1"/>
 <wire x1="2.935" y1="48.895" x2="2.5146" y2="51.435" width="0" layer="19" extent="1-1"/>
@@ -1752,18 +1734,9 @@ design rules under a new name.</description>
 <signal name="CLK/FEEDBACK">
 <contactref element="U1" pad="3"/>
 <contactref element="U$2" pad="3"/>
-<contactref element="R7" pad="1"/>
-<contactref element="OK1" pad="1"/>
 <contactref element="PAD8" pad="1"/>
-<wire x1="2.5146" y1="50.4952" x2="8.89" y2="67.31" width="0" layer="19" extent="1-1"/>
 <wire x1="26.45" y1="11.62" x2="2.5146" y2="50.4952" width="0" layer="19" extent="1-1"/>
 <wire x1="-39.37" y1="25.4" x2="2.5146" y2="50.4952" width="0" layer="19" extent="1-1"/>
-<wire x1="-44.03" y1="35.56" x2="-39.37" y2="25.4" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$2">
-<contactref element="OK1" pad="3"/>
-<contactref element="R6" pad="1"/>
-<wire x1="-40.22" y1="35.56" x2="6.35" y2="67.31" width="0" layer="19" extent="1-16"/>
 </signal>
 </signals>
 </board>
